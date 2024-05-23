@@ -82,6 +82,7 @@ PUT /scrocket/:id
 ## Future work 
 - Implement authentication endpoint using JWT
 - Authenticate all endpoints
+- Improve data validation
 - Implement pagination for sprockets
 - Implement testing: unit, integration, E2E, load
 - Use Swagger to document the API
