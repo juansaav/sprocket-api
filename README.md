@@ -15,7 +15,7 @@ This is a RESTful API that uses:
 npm install
 ```
 
-## Run the app 
+## Run the api 
 ```
 npm run start
 ```
@@ -24,6 +24,10 @@ This command will:
 2. Build the project
 3. Run the project on port `3000`
 4. Insert seed data
+
+## Test
+
+You can import from Postman the `Sprocket API.postman_collection.json` file or create your own requests.
 
 ### List factories paginated
 Lists factories paginated using `offset` and `limit`.
@@ -73,3 +77,14 @@ PUT /scrocket/:id
     "pitch": 4
 }
 ```
+
+
+## Future work 
+- Implement authentication endpoint using JWT
+- Authenticate all endpoints
+- Implement pagination for sprockets
+- Implement testing: unit, integration, E2E, load
+- Use Swagger to document the API
+- Create two more envs: stg, prod. Create terraform scripts to deploy using Kubernetes
+- Implement CI/CD pipeline, add github actions or use Buildkite to validate PRs and deploy
+- Consider using a cache like Redis to cache data, i.e. factory data

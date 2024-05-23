@@ -39,7 +39,7 @@ export const SprocketRouter = (router: Router, ): void => {
     }
   );
 
-  // edit sprocket
+  // update sprocket
   route.put(
     "/:id",
     isAuth,

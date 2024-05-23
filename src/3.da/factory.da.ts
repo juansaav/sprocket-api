@@ -20,9 +20,6 @@ export class FactoryDA {
     return await this.db.client.factory.findMany({
       skip: offset,
       take: limit,
-      include: {
-        performanceValues: true,
-      },
     });
   }
 }
