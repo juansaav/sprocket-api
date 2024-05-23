@@ -7,20 +7,10 @@ import { Service } from "typedi";
 export class FactoryDA {
   constructor(private readonly db: DB) {}  
 
-  public async getFactoryData(id: number, fromDate: Date, toDate: Date): Promise<Factory> {
+  public async getFactoryData(id: number): Promise<Factory> {
     var obj = await this.db.client.factory.findUnique({
       where: {
         id,
-      },
-      include: {
-        performanceValues: {
-          where: {
-            time: {
-              gte: fromDate,
-              lte: toDate,
-            },
-          },
-        },
       },
     });
     return obj;

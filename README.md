@@ -32,10 +32,17 @@ GET /factory?offset=:offset&limit=:limit`
 ```
 
 ### Get factory paginated
-Returns the factory by `id` and its performance values between `fromDate` and `toDate`.
+Returns the factory by `id`
 ```
-GET /factory/:id?fromDate=:fromDate&toDate=:toDate
+GET /factory/:id
 ```
+
+### Get factory performance values
+Returns factory performance values between `fromDate` and `toDate`. If no values are passed, default values are assigned.
+```
+GET /factory/:id/performance-values?fromDate=:fromDate&toDate=:toDate
+```
+
 
 ### Get scrocket
 Returns the scrocket by `id`.
