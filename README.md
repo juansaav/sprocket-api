@@ -37,7 +37,7 @@ Lists factories paginated using `offset` and `limit`.
 GET /factory?offset=:offset&limit=:limit`
 ```
 
-### Get factory paginated
+### Get factory
 Returns the factory by `id`
 ```
 GET /factory/:id
@@ -49,31 +49,30 @@ Returns factory performance values between `fromDate` and `toDate`. If no values
 GET /factory/:id/performance-values?fromDate=:fromDate&toDate=:toDate
 ```
 
-
 ### Get scrocket
 Returns the scrocket by `id`.
 ```
-GET /scrocket/:id
+GET /sprocket/:id
 ```
 
-### Create scrocket. 
-Returns the scrocket by `id`. All fields are required.
+### Create sprocket. 
+Returns the sprocket by `id`. All fields are required.
 ```
-POST /scrocket
+POST /sprocket
 {
-	"teeth": 1,
+    "teeth": 1,
     "pitchDiameter": 2,
     "outsideDiameter": 3,
     "pitch": 4
 }
 ```
 
-### Update scrocket
-Updates the scrocket by `id`. All fields are optional.
+### Update sprocket
+Updates the sprocket by `id`. All fields are optional.
 ```
-PUT /scrocket/:id
+PUT /sprocket/:id
 {
-	"teeth": 1,
+    "teeth": 1,
     "pitchDiameter": 2,
     "outsideDiameter": 3,
     "pitch": 4
