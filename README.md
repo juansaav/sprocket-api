@@ -16,6 +16,8 @@ npm install
 ```
 
 ## Run the api 
+Prerequisites: have Docker running
+
 ```
 npm run start
 ```
