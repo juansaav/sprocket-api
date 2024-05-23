@@ -1,0 +1,31 @@
+datasource db {
+  provider = "postgresql"
+  url      = "postgres://user:password@localhost:5432/dev?schema=public"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Factory {
+  id                 Int               @id @default(autoincrement())
+  name               String            @unique
+  performanceValues  PerformanceValue[]
+}
+
+model PerformanceValue {
+  id               Int                 @id @default(autoincrement())
+  time             DateTime            @unique
+  productionGoal   Int
+  productionActual Int
+  factory          Factory             @relation(fields: [factoryId], references: [id])
+  factoryId Int
+}
+
+model Sprocket {
+  id                 Int               @id @default(autoincrement())
+  teeth              Int            
+  pitchDiameter      Int
+  outsideDiameter    Int
+  pitch              Int
+}

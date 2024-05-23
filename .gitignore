@@ -1,0 +1,9 @@
+node_modules
+migrations
+.vscode/launch.json
+/shared/generated/graphql.ts
+codegen.yml
+.metaapi/
+shared/generated
+.DS_Store
+dist
