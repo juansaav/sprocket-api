@@ -49,8 +49,8 @@ Returns factory performance values between `fromDate` and `toDate`. If no values
 GET /factory/:id/performance-values?fromDate=:fromDate&toDate=:toDate
 ```
 
-### Get scrocket
-Returns the scrocket by `id`.
+### Get sprocket
+Returns the sprocket by `id`.
 ```
 GET /sprocket/:id
 ```
